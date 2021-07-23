@@ -27,8 +27,9 @@ def get_user(user_id):
 
 @app.route("/api/users/<int:user_id>", methods=["DELETE"])
 def delete_user(user_id):
+    pass
 
-@app.route("/api/send")
+@app.route("/api/send/")
 def send_money():
     pass
 
