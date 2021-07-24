@@ -64,14 +64,12 @@ class DatabaseDriver(object):
             SELECT * from user WHERE id = ?;
         """, (user_id,))
         for row in cursor:
-            print("found")
             user = {}
             user["id"] = row[0]
             user["name"] = row[1]
             user["username"] = row[2]
             user["balance"] = row[4]
             return user
-        print("notfound")
         return None
 
     def delete_user_by_id(self, id):
